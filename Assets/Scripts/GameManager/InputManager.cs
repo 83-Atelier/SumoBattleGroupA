@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static InputManager Instance { get; private set; }
+    public InputAction MoveAction { get; private set; }
+    
+    void Awake()
     {
+        if (!Instance)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        MoveAction = InputSystem.actions.FindAction("Move");
     }
 }
