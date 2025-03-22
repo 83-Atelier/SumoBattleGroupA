@@ -7,7 +7,7 @@ public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }
     public InputAction MoveAction { get; private set; }
-    // Start is called before the first frame update
+    
     void Awake()
     {
         if (!Instance)

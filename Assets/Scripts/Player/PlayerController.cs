@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Rigidbody body;
 
-    // Update is called once per frame
     private void Start()
     {
         body = GetComponent<Rigidbody>();
