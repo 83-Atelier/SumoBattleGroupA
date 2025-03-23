@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpRing: {fileID: 1526364205}
+  hasPowerup: 0
 --- !u!114 &25219920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,6 +515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0092034e8add8d24ca58f635cfd102de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 3854600266889019146, guid: 1c2587337e8f8c4409c6aea1367b0bf7, type: 3}
+  enemyCount: 0
+  waveNumber: 0
 --- !u!4 &1121156049
 Transform:
   m_ObjectHideFlags: 0
