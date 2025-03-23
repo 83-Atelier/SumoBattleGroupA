@@ -5,7 +5,7 @@ using UnityEngine;
 public class ActivatePowerup : MonoBehaviour
 {
     public GameObject powerUpRing;
-    public bool hasPowerup = false;
+    private bool hasPowerup = false;
     private float powerupStrength = 15.0f;
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,7 @@ public class ActivatePowerup : MonoBehaviour
     {
         if (other.CompareTag("PowerUp"))
         {
-            hasPowerup = true; // set hasPowerup to true
+            hasPowerup = true;
             ActivateRing();
             Destroy(other.gameObject);
             StartCoroutine(PowerupCountdownRoutine());
